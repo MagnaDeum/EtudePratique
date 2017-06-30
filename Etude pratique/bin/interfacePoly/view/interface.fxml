@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="755.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfacePoly.controller.ControllerInterface">
+   <top>
+      <HBox fx:id="hbox_top" prefHeight="28.0" prefWidth="755.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="add_button" mnemonicParsing="false" text="Ajouter Fonction" textAlignment="JUSTIFY" />
+            <Button fx:id="import_button" mnemonicParsing="false" text="Importer" textAlignment="JUSTIFY" />
+            <Button fx:id="export_button" mnemonicParsing="false" text="Exporter" />
+            <Button fx:id="save_button" mnemonicParsing="false" text="Save" />
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox fx:id="hbox_bot" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="mul_button" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0" text="Multiplication" />
+            <Button fx:id="proj_button" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0" text="Projection" />
+            <Button fx:id="restri_button" layoutX="150.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0" text="Restriction" />
+            <Button fx:id="graph_button" layoutX="270.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0" text="Graphique" />
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <center>
+      <Pane fx:id="pane_left" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane fx:id="table_container" >
+               <center>
+                  <TableView fx:id="table" BorderPane.alignment="CENTER">
+                    <columns>
+                      <TableColumn fx:id="nom" prefWidth="75.0" text="Nom" />
+                      <TableColumn fx:id="distrib" prefWidth="75.0" text="Distrib?" />
+                        <TableColumn fx:id="limites" prefWidth="75.0" text="Limites" />
+                        <TableColumn fx:id="proba" prefWidth="63.0" text="Proba" />
+                        <TableColumn fx:id="dimensions" prefWidth="60.0" text="Dimensions" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </center>
+               <top>
+                  <HBox fx:id="table_hbox" alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="363.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="makedis_button" mnemonicParsing="false" text="Faire distrib" />
+                        <Button fx:id="setlim_button" mnemonicParsing="false" text="Set Limites" />
+                     </children>
+                  </HBox>
+               </top>
+            </BorderPane>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
